@@ -33,6 +33,7 @@ class ConversationController extends Controller
     public function store(ConversationRequest $request)
     {
         $user = User::where('email', $request->get('email'))->first();
+
         Conversation::create([
             'title' => $request->get('title'),
             'user_1' => Auth()->id(),

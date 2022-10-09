@@ -25,7 +25,7 @@ class ConversationRequest extends FormRequest
     {
         return [
             'title' => 'string|required',
-            'email' => [$this->isMethod("post") ? ['email','required','exists:users,email' ] : 'nullable']
+            'email' => [$this->isMethod("post") ? 'exists:users,email' : 'nullable']
         ];
     }
 }
