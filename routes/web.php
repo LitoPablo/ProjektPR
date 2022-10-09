@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\ConversationController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PageController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [PageController::class, 'home'])->name('home');
+
+Route::middleware(['auth', 'verified'])->group(function(){
+    Route::resource('/message', MessageController::class);
+    Route::resource('/conversation', ConversationController::class);
 });
