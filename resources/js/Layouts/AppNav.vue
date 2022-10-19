@@ -14,10 +14,11 @@
 <template>
     <div class="flex flex-row justify-between gap-3 px-3 py-1 items-center">
         <!-- START -->
-        <div class="shrink-0 flex items-center gap-2">
+        <div class="shrink-0 flex items-center gap-0">
             <Link :href="route('home')">
                 <ApplicationLogo class="block h-11 w-auto" />
             </Link>
+            Usługi Projektowe WIMAG Tomasz Baranowski
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
