@@ -3,7 +3,7 @@
     import AppLayout from "@/Layouts/AppLayout.vue"
 </script>
 <template>
-    <Head title="WIMAG" />
+    <Head title="Usługi" />
 
     <AppLayout>
         <template #body>

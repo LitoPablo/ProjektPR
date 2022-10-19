@@ -19,6 +19,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/services', [PageController::class, 'services'])->name('services');
 
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::resource('/message', MessageController::class);

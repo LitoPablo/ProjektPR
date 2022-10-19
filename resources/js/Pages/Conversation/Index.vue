@@ -22,7 +22,7 @@
     }
 </script>
 <template>
-    <Head title="Welcome" />
+    <Head title="Konwersacje" />
 
     <AppLayout>
         <template #body>

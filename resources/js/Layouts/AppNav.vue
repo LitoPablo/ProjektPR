@@ -16,7 +16,7 @@
         <!-- START -->
         <div class="shrink-0 flex items-center gap-2">
             <Link :href="route('home')">
-                <ApplicationLogo class="block h-9 w-auto" />
+                <ApplicationLogo class="block h-11 w-auto" />
             </Link>
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
@@ -29,9 +29,12 @@
         </div>
 
         <!-- CENTER -->
-        <div class="flex flex-row gap-2 flex-grow justify-center">
+        <div class="flex flex-row gap-3 flex-grow justify-center">
             <NavLink :href="route('home')" :active="route().current('home')">
                 Home
+            </NavLink>
+            <NavLink :href="route('services')" :active="route().current('services')">
+                Usługi
             </NavLink>
             <NavLink :href="route('conversation.index')" :active="route().current('conversation.index')">
                 Konwersacje
