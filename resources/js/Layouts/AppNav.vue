@@ -37,8 +37,12 @@
             <NavLink :href="route('services')" :active="route().current('services')">
                 Usługi
             </NavLink>
-            <NavLink :href="route('conversation.index')" :active="route().current('conversation.index')">
-                Konwersacje
+            <NavLink v-if="!$page.props.auth.user?.roles.includes('admin')" :href="route('ticket.index')" :active="route().current('ticket.index')">
+                Tickety
+            </NavLink>
+
+            <NavLink v-if="$page.props.auth.user?.roles.includes('admin')" :href="route('admin.ticket.index')" :active="route().current('admin.ticket.index')">
+                Admin Tickety
             </NavLink>
         </div>
 

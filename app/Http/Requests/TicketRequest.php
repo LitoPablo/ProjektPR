@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ConversationRequest extends FormRequest
+class TicketRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,9 @@ class ConversationRequest extends FormRequest
     {
         return [
             'title' => 'string|required',
-            'email' => [$this->isMethod("post") ? 'exists:users,email' : 'nullable']
+            'description' => 'string|required',
+            'ticket_level_id' => 'exists:ticket_levels,id',
+            'user_id' => 'exists:users,id'
         ];
     }
 }

@@ -11,13 +11,13 @@ class Message extends Model
 
     protected $fillable = [
         'message',
-        'conversation_id',
+        'ticket_id',
         'user_id',
     ];
 
-    public function Conversation()
+    public function ticket()
     {
-        return $this->belongsTo(Conversation::class);
+        return $this->belongsTo(Ticket::class);
     }
 
     public function user()

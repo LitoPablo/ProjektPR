@@ -7,15 +7,15 @@
     import Button from 'primevue/button';
 
     const props = defineProps({
-        conversation: Object
+        ticket: Object
     })
 
     const form = useForm({
-        title: props.conversation.title,
+        title: props.ticket.title,
     });
 
     const submit = () => {
-        form.put(route('conversation.update', props.conversation));
+        form.put(route('ticket.update', props.ticket));
     }
 </script>
 <template>

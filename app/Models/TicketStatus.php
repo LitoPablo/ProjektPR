@@ -5,18 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Conversation extends Model
+class TicketStatus extends Model
 {
     use HasFactory;
-
+    
     protected $fillable = [
-        'user_1',
-        'user_2',
-        'title',
+        'name'
     ];
-
-    public function Messages()
-    {
-        return $this->hasMany(Message::class);
-    }
 }
